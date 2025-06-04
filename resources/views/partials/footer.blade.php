@@ -99,7 +99,7 @@
         <!-- Bottom Row -->
         <div class="flex flex-col md:flex-row justify-between items-center text-sm text-white bg-[#1e3a8a] py-12  px-4">
             <div class="mb-2 md:mb-0">
-                &copy; 2025 VAMTAM. ALL RIGHTS RESERVED
+                &copy; 2025 Becker. ALL RIGHTS RESERVED
             </div>
             <div class="flex space-x-4 mb-2 md:mb-0">
                 <a href="#" class="hover:text-white transition-colors">TERMS</a>
