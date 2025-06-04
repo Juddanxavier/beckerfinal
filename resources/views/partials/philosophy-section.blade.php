@@ -15,10 +15,12 @@
             </div>
             <div class="mb-12 relative z-10">
                 <span
-                    class="inline-block px-4 py-1 rounded-full bg-[#1e3a8a] border border-white/20 text-white text-xs font-semibold mb-6">OUR
-                    PHILOSOPHY</span>
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">Strategic Interventions
-                    that<br>Transform our Clients' Business Trajectory</h2>
+                    class="inline-block px-4 py-1 rounded-full bg-[#1e3a8a] border border-white/20 text-white text-xs font-semibold mb-6">PRODUCTS
+                    FROM BECKER
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">Find the knowledge you need
+                    for<br>
+                    the Becker product that's right for you.</h2>
                 <div class="w-32 h-1 bg-[#60a5fa] rounded mb-8"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
