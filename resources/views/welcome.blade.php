@@ -19,7 +19,7 @@
 
     @include('partials.strengths-values-section')
     @include('partials.latest-insights-section')
-
+    @include('partials.banner-section')
     @include('partials.contact-section')
 
 @endsection

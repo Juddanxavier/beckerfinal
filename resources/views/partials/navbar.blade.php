@@ -74,14 +74,14 @@
                     class="fixed left-0 right-0 mx-auto top-[70px] max-w-screen-xl w-full bg-white text-black shadow-2xl rounded-2xl p-0 z-50 flex items-stretch"
                     @click.away="open = false" style="display: none; min-width: 320px;">
                     <!-- Left Promo Card -->
-                    <div class="flex flex-col justify-between bg-[#e9e9e3] rounded-2xl m-6 p-8 min-w-[320px] max-w-xs">
-                        <div>
+                    <div class="flex flex-col justify-between rounded-2xl m-6 p-8 min-w-[320px] max-w-xs" style="background-image: url('{{ asset('images/home-slide-sm.webp') }}'); background-size: cover; background-position: center; height: 300px;">
+                        {{-- <div>
                             <div class="text-lg font-semibold text-[#1e3a8a] mb-4">Fresh Perspectives,<br>Unmatched Solutions</div>
                         </div>
                         <a href="#" class="mt-8 inline-flex items-center px-5 py-3 bg-lime-400 text-[#1e3a8a] font-bold rounded-full hover:bg-lime-500 transition">
                             View All
                             <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-                        </a>
+                        </a> --}}
                     </div>
                     <!-- Right Columns -->
                     <div class="flex-1 grid grid-cols-2 md:grid-cols-3 gap-8 p-8">
@@ -128,17 +128,17 @@
                     class="fixed left-0 right-0 mx-auto top-[70px] max-w-screen-xl w-full bg-white text-black shadow-2xl rounded-2xl p-0 z-50 flex items-stretch"
                     @click.away="open = false" style="display: none; min-width: 320px;">
                     <!-- Left Promo Card -->
-                    <div class="flex flex-col justify-between bg-[#e9e9e3] rounded-2xl m-6 p-8 min-w-[320px] max-w-xs">
-                        <div>
+                    <div class="flex flex-col justify-between rounded-2xl m-6 p-8 min-w-[320px] max-w-xs" style="background-image: url('{{ asset('images/home-slide-sm.webp') }}'); background-size: cover; background-position: center; height: 300px;">
+                        {{-- <div>
                             <div class="text-lg font-semibold text-[#1e3a8a] mb-4">Discover Our<br>Product Suite</div>
-                        </div>
-                        <a href="#" class="mt-8 inline-flex items-center px-5 py-3 bg-lime-400 text-[#1e3a8a] font-bold rounded-full hover:bg-lime-500 transition">
+                        </div> --}}
+                        {{-- <a href="#" class="mt-8 inline-flex items-center px-5 py-3 bg-lime-400 text-[#1e3a8a] font-bold rounded-full hover:bg-lime-500 transition">
                             View All
                             <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-                        </a>
+                        </a> --}}
                     </div>
                     <!-- Right Columns -->
-                    <div class="flex-1 grid grid-cols-2 md:grid-cols-3 gap-8 p-8">
+                    <div class="flex-1 grid grid-cols-2 md:grid-cols-3 gap-8 p-8" style="height: 300px;">
                         <div>
                             <h5 class="uppercase text-xs font-bold text-gray-500 mb-3">Core Products</h5>
                             <ul class="space-y-2">
@@ -210,11 +210,11 @@
                 <div x-show="open" x-transition class="pl-2 py-2 space-y-2 bg-white text-black rounded-2xl shadow-md mt-1" style="display: none;">
                     <!-- Promo Card -->
                     <div class="bg-[#e9e9e3] rounded-2xl p-4 mb-4">
-                        <div class="text-base font-semibold text-[#1e3a8a] mb-2">Fresh Perspectives, Unmatched Solutions</div>
+                        {{-- <div class="text-base font-semibold text-[#1e3a8a] mb-2">Fresh Perspectives, Unmatched Solutions</div>
                         <a href="#" class="mt-4 inline-flex items-center px-4 py-2 bg-lime-400 text-[#1e3a8a] font-bold rounded-full hover:bg-lime-500 transition">
                             View All
                             <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-                        </a>
+                        </a> --}}
                     </div>
                     <div>
                         <h5 class="uppercase text-xs font-bold text-gray-500 mb-2">Services</h5>

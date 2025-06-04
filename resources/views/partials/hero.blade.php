@@ -23,12 +23,12 @@
         </h1>
         {{-- Free Consultation Button --}}
         <a href="{{ route('home') }}" {{-- Update route if needed --}}
-            class="inline-block bg-[#1e3a8a] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#2563eb] transition-colors duration-300">Free
-            Consultation</a>
+            class="inline-block bg-[#1e3a8a] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#2563eb] transition-colors duration-300">Learn
+            More</a>
     </div>
 
     {{-- Bottom Text Elements --}}
-    <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+    {{-- <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
         <div class="container mx-auto px-4 flex justify-around">
             <a href="#"
                 class="text-sm text-black font-semibold tracking-wider bg-white bg-opacity-20 backdrop-blur-sm rounded-sm px-4 py-2">TRUSTED
@@ -39,5 +39,5 @@
             <a href="#"
                 class="text-sm text-black font-semibold tracking-wider bg-white bg-opacity-20 backdrop-blur-sm rounded-sm px-4 py-2">INVESTING</a>
         </div>
-    </div>
+    </div> --}}
 </section>
