@@ -1,5 +1,5 @@
 <!-- Banner Section -->
-<section class="relative py-20 mb-12" data-aos="fade-up" data-aos-duration="1000">
+<section class="relative py-12" data-aos="fade-up" data-aos-duration="1000">
     <div class="max-w-7xl mx-auto px-4">
         <div class="relative rounded-3xl overflow-hidden">
             <!-- Background Image -->
