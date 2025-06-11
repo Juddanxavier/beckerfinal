@@ -1,5 +1,5 @@
 <footer class="bg-white text-white pt-16">
-    <div class="container mx-auto px-4 ">
+    <div class=" px-4 ">
         <div class="px-4 bg-[#2549b1] pt-24 rounded-t-2xl ">
             <div class="grid grid-cols-2 gap-4 mt-8 container mx-auto px-4 max-w-screen-xl">
                 <div class="flex justify-right w-full">
@@ -34,7 +34,7 @@
                 <p class="text-white/80 mb-2">office@execor.com</p>
                 <p class="text-white/80 mb-6">+1(122)800 88 08</p>
                 <div class="mt-8">
-                    <a href="#"
+                    <a href="{{ route('contact') }}"
                         class="inline-block bg-[#2563eb] text-white font-semibold py-3 px-8 rounded-full hover:bg-white hover:text-[#2563eb] transition">
                         Contact US
                     </a>

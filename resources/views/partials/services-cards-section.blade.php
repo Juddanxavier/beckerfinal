@@ -1,10 +1,11 @@
-<section class="py-16 bg-[#FEFDFD]" data-aos="fade-up">
+<section class="py-16 bg-[#F6F5F2]" data-aos="fade-up" data-aos-duration="1000">
     <div class="container mx-auto px-4">
         <div class="flex flex-col items-center mb-12">
             <span class="px-4 py-1 rounded-full bg-gray-100 text-gray-700 text-xs font-semibold mb-4">Industries We
                 Serve
             </span>
-            <h2 class="text-4xl font-normal text-[#23403A] text-center mb-4">Discover how Becker's vacuum solutions
+            <h2 class="text-4xl md:text-5xl font-normal text-center mb-4">Discover how Becker's vacuum
+                solutions
                 empower
                 <br>various industries worldwide.
             </h2>
@@ -18,7 +19,7 @@
                 <div
                     class="w-full flex justify-between items-center mt-auto px-4 py-8 transition-colors duration-200 group-hover:bg-[#1e3a8a]">
                     <span
-                        class="text-lg font-semibold text-[#23403A] group-hover:text-white transition-colors duration-200">Medical</span>
+                        class="text-xl font-semibold text-[#23403A] group-hover:text-white transition-colors duration-200">Medical</span>
                     <span
                         class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 group-hover:bg-white transition-colors duration-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -35,7 +36,7 @@
                 <div
                     class="w-full flex justify-between items-center mt-auto px-4 py-8 transition-colors duration-300 group-hover:bg-[#1e3a8a] ">
                     <span
-                        class="text-lg font-semibold text-[#23403A] group-hover:text-white transition-colors duration-200">Wood
+                        class="text-xl font-semibold text-[#23403A] group-hover:text-white transition-colors duration-200">Wood
                         Working</span>
                     <span
                         class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 group-hover:bg-white transition-colors duration-200">
@@ -53,7 +54,7 @@
                 <div
                     class="w-full flex justify-between items-center mt-auto px-4 py-8 transition-colors duration-200 group-hover:bg-[#1e3a8a]">
                     <span
-                        class="text-lg font-semibold text-[#23403A] group-hover:text-white transition-colors duration-200">Pharmaceutical</span>
+                        class="text-xl font-semibold text-[#23403A] group-hover:text-white transition-colors duration-200">Pharmaceutical</span>
                     <span
                         class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 group-hover:bg-white transition-colors duration-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -83,9 +84,9 @@
         </div>
         <div class="flex justify-center">
             <div class="mt-8">
-                <a href="#"
+                <a href="{{ route('services') }}"
                     class="inline-block bg-[#1e3a8a] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#004a6b] transition">
-                    View All Services
+                    Explore Our Services
                 </a>
             </div>
         </div>

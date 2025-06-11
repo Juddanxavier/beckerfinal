@@ -1,6 +1,6 @@
 <!-- resources/views/partials/hero.blade.php -->
 
-<section class="relative h-screen flex items-center overflow-hidden" data-aos="fade-up">
+<section class="relative h-screen flex items-center overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
     {{-- Replace with the actual path to your theme's hero background image --}}
     <img src="{{ asset('images/homepage/CoverSlide.png') }}" alt="Hero Background"
         class="absolute inset-0 w-full h-full object-cover rounded-4xl p-3">
@@ -18,9 +18,9 @@
 
         {{-- Green Line --}}
         <div class="w-16 h-1 bg-blue-500 mb-8"></div> {{-- Placeholder green color, adjust width/height as needed --}}
-        <h1 class="text-lg leading-tight mb-4 w-full md:w-2/3">Innovative customer-oriented
+        <h2 class="text-lg text-gray-700 leading-tight mb-4 w-full md:w-2/3">Innovative customer-oriented
             vacuum and compressed air solutions since 1885.
-        </h1>
+        </h2>
         {{-- Free Consultation Button --}}
         <a href="{{ route('home') }}" {{-- Update route if needed --}}
             class="inline-block bg-[#1e3a8a] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#2563eb] transition-colors duration-300">Learn

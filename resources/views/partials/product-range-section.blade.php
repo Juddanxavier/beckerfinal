@@ -1,6 +1,6 @@
 <!-- resources/views/partials/product-range-section.blade.php -->
 
-<section class="py-16 bg-[#f9fafb]" data-aos="fade-up">
+<section class="py-16 bg-[#f9fafb]" data-aos="fade-up" data-aos-duration="1000">
     <div class="container mx-auto px-4 max-w-screen-xl">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <!-- Left Column: Heading and Subtitle -->
@@ -12,7 +12,7 @@
             </div>
 
             <!-- Right Column: Text Content -->
-            <div class="md:col-span-1 text-gray-700 text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+            <div class="md:col-span-1 text-gray-700 text-base leading-relaxed" data-aos="fade-up" data-aos-delay="200">
                 <p class="mb-6">
                     As a renowned vacuum pump manufacturer, we are your expert partner and provider of vacuum and
                     compressed

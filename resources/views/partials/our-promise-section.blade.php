@@ -1,9 +1,9 @@
-<section class="py-16 bg-white" data-aos="fade-up">
+<section class="py-16 bg-white" data-aos="fade-up" data-aos-duration="1000">
     <div class="container mx-auto px-4 max-w-screen-xl">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- Left Column: Text Content -->
-            <div class="md:col-span-1 text-lg text-gray-700 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                <h2 class="text-4xl mb-6">Our Promise</h2>
+            <div class="md:col-span-1 text-base text-gray-700 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="text-4xl md:text-5xl mb-6">Our Promise</h2>
                 <p class="mb-6">
                     As a global market leader and experienced vacuum pump manufacturer, we set the standard in air
                     transportation. Our vision and guiding principle, <span class="text-[#1e3a8a] font-semibold">"We

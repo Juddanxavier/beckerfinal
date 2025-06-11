@@ -1,19 +1,21 @@
 <!-- resources/views/partials/latest-insights-section.blade.php -->
 
-<section class="py-16" data-aos="fade-up">
+<section class="py-16" data-aos="fade-up" data-aos-duration="1000">
     <div class="container mx-auto px-4 max-w-screen-xl ">
         <div class="text-center mb-12" data-aos="fade-up" data-aos-delay="100">
-            <span
-                class="inline-block bg-gray-200 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">INSIGHTS</span>
-            <h2 class="text-4xl md:text-5xl text-[#23403A] font-semibold mb-4">Our Latest Insights</h2>
-            <p class="text-lg text-gray-600">Proprietary data, expert analysis and bold thinking for leaders<br>who want
+            <span class="inline-block bg-gray-200 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full mb-4"
+                data-aos="fade-in" data-aos-delay="150">INSIGHTS</span>
+            <h2 class="text-4xl md:text-5xl text-[#23403A] font-semibold mb-4" data-aos="fade-up" data-aos-delay="200">
+                Our Latest Insights</h2>
+            <p class="text-lg text-gray-600" data-aos="fade-up" data-aos-delay="250">Proprietary data, expert analysis
+                and bold thinking for leaders<br>who want
                 to achieve the extraordinary.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Placeholder Card 1 -->
             <div class="bg-[#f8f7f5] rounded-3xl overflow-hidden flex flex-col md:flex-row" data-aos="fade-up"
-                data-aos-delay="200">
+                data-aos-delay="300">
                 <div class="md:w-1/2">
                     <img src="{{ asset('images/homepage/pipes.jpg') }}" alt="Service 1"
                         class="w-full h-72 object-cover rounded-4xl">
@@ -38,7 +40,7 @@
 
             <!-- Placeholder Card 2 -->
             <div class="bg-[#f8f7f5] rounded-3xl overflow-hidden flex flex-col md:flex-row" data-aos="fade-up"
-                data-aos-delay="300">
+                data-aos-delay="400">
                 <div class="md:w-1/2">
                     {{-- Placeholder Image --}}
                     <img src="{{ asset('images/homepage/pipes.jpg') }}" alt="Service 1"
@@ -63,10 +65,11 @@
 
         </div>
 
-        <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
+        <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
             <div class="mt-8">
                 <a href="#"
-                    class="inline-block bg-[#1e3a8a] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#2563eb] transition">
+                    class="inline-block bg-[#1e3a8a] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#2563eb] transition"
+                    data-aos="zoom-in" data-aos-delay="550">
                     More Insights
                 </a>
             </div>

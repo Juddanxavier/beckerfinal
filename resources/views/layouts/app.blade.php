@@ -17,35 +17,18 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 
-<body class="font-sans antialiased m-0" x-data="{ loading: true }"
-    x-init="window.addEventListener('DOMContentLoaded', () => { setTimeout(() => loading = false, 600); })">
-    <!-- Page Loader Overlay -->
-    <div x-show="loading" x-transition.opacity.duration.500ms
-        class="fixed inset-0 z-50 flex items-center justify-center bg-white">
-        <img src="/images/becker-logo-new.png" alt="Loading..." class="w-full max-w-4xl animate-bounce"
-            style="animation: bounce 1.2s infinite;" />
-        <style>
-            @keyframes bounce {
+<body class="font-sans antialiased m-0">
+    @include('partials.loader')
 
-                0%,
-                100% {
-                    transform: translateY(0);
-                }
-
-                50% {
-                    transform: translateY(-30px);
-                }
-            }
-        </style>
-    </div>
-    <!-- Navbar (hidden while loading) -->
-    <div x-show="!loading" x-transition.opacity.duration.300ms>
+    <!-- Navbar -->
+    <div>
         @include('partials.navbar')
     </div>
 
-    <div class="min-h-screen ">
+    <div class="min-h-screen page-content-wrapper">
         <!-- Page Content -->
         <main>
             @yield('content')
@@ -54,6 +37,21 @@
 
     @include('partials.footer')
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.add('loading');
+            const loader = document.getElementById('loader-overlay');
+            if (loader) {
+                // The CSS animation 'logo-reveal' is 1.5s
+                // We add a small buffer before hiding the loader
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                    document.body.classList.remove('loading');
+                    document.body.classList.add('loaded');
+                }, 1600); // 1500ms for animation + 100ms buffer
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-<section class="py-16 font-sans" data-aos="fade-up">
+<section class="py-16 font-sans" data-aos="fade-up" data-aos-duration="1000">
     <div class="container mx-auto px-4 relative">
         <div class="bg-gradient-to-br from-[#1e3a8a] to-[#2563eb] rounded-3xl p-10 md:p-16 relative overflow-hidden">
             <!-- Chatbox Tail -->
@@ -15,13 +15,14 @@
             </div>
             <div class="mb-12 relative z-10">
                 <span
-                    class="inline-block px-4 py-1 rounded-full bg-[#1e3a8a] border border-white/20 text-white text-xs font-semibold mb-6">PRODUCTS
+                    class="inline-block px-4 py-1 rounded-full bg-[#1e3a8a] border border-white/20 text-white text-xs font-semibold mb-6"
+                    data-aos="fade-in" data-aos-delay="100">PRODUCTS
                     FROM BECKER
                 </span>
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">Find the knowledge you need
-                    for<br>
-                    the Becker product that's right for you.</h2>
-                <div class="w-32 h-1 bg-[#60a5fa] rounded mb-8"></div>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight" data-aos="fade-up"
+                    data-aos-delay="150">Find the knowledge you need
+                    for<br>the Becker product that's right for you.</h2>
+                <div class="w-32 h-1 bg-[#60a5fa] rounded mb-8" data-aos="fade-in" data-aos-delay="200"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
                 <!-- Card 1 -->
@@ -98,7 +99,7 @@
                 <!-- Stat 1 -->
                 <div class="flex-1 flex flex-col items-center py-6 md:py-0" data-aos="fade-up" data-aos-delay="0">
                     <div class="bg-gray-100 rounded-xl px-8 py-4 mb-2 flex items-center justify-center">
-                        <span class="text-3xl md:text-4xl font-bold text-[#23403A]">1885</span>
+                        <span class="text-3xl md:text-4xl font-bold text-[#23403A] countup" data-target="1885">0</span>
                     </div>
                     <span
                         class="text-xs md:text-sm font-semibold text-gray-500 tracking-wider uppercase text-center">Foundation</span>
@@ -106,8 +107,7 @@
                 <!-- Stat 2 -->
                 <div class="flex-1 flex flex-col items-center py-6 md:py-0" data-aos="fade-up" data-aos-delay="100">
                     <div class="bg-gray-100 rounded-xl px-8 py-4 mb-2 flex items-center justify-center">
-                        <span class="text-3xl md:text-4xl font-bold text-[#23403A]">1100
-                        </span>
+                        <span class="text-3xl md:text-4xl font-bold text-[#23403A] countup" data-target="1100">0</span>
                     </div>
                     <span
                         class="text-xs md:text-sm font-semibold text-gray-500 tracking-wider uppercase text-center">Committed
@@ -117,7 +117,8 @@
                 <!-- Stat 3 -->
                 <div class="flex-1 flex flex-col items-center py-6 md:py-0" data-aos="fade-up" data-aos-delay="200">
                     <div class="bg-gray-100 rounded-xl px-8 py-4 mb-2 flex items-center justify-center">
-                        <span class="text-3xl md:text-4xl font-bold text-[#23403A]">140000</span>
+                        <span class="text-3xl md:text-4xl font-bold text-[#23403A] countup"
+                            data-target="140000">0</span>
                     </div>
                     <span
                         class="text-xs md:text-sm font-semibold text-gray-500 tracking-wider uppercase text-center">Pumps
@@ -139,3 +140,39 @@
         </div>
     </div>
 </section>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function animateCountUp(el) {
+            const target = +el.getAttribute('data-target');
+            const duration = 2000; // ms
+            const start = 0;
+            let startTimestamp = null;
+
+            function step(timestamp) {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                el.textContent = Math.floor(progress * (target - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    el.textContent = target;
+                }
+            }
+            window.requestAnimationFrame(step);
+        }
+
+        // Intersection Observer to trigger animation on scroll
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCountUp(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.7 });
+
+        document.querySelectorAll('.countup').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>

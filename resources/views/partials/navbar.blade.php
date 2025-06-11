@@ -44,12 +44,12 @@
          'translate-y-0': isVisible
      }"
      x-show="isVisible"
-     x-transition:enter="transition ease-in-out duration-500"
-     x-transition:enter-start="opacity-0 -translate-y-10"
-     x-transition:enter-end="opacity-100 translate-y-0"
-     x-transition:leave="transition ease-in-out duration-500"
-     x-transition:leave-start="opacity-100 translate-y-0"
-     x-transition:leave-end="opacity-0 -translate-y-10"
+     x-transition:enter="transition transform ease-out duration-1000"
+     x-transition:enter-start="-translate-y-full opacity-0"
+     x-transition:enter-end="translate-y-0 opacity-100"
+     x-transition:leave="transition transform ease-in duration-500"
+     x-transition:leave-start="translate-y-0 opacity-100"
+     x-transition:leave-end="-translate-y-full opacity-0"
 >
 
     <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
@@ -62,13 +62,21 @@
 
         <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-6">
-            <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'nav-link-active' : '' }}"><span>Home</span></a>
-            <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('about') ? 'nav-link-active' : '' }}"><span>About</span></a>
+            <a href="{{ route('home') }}" class="nav-link font-semibold text-gray-900 relative overflow-hidden group {{ request()->routeIs('home') ? 'nav-link-active' : '' }}">
+                <span>Home</span>
+                <span class="absolute left-0 bottom-0 w-full h-0.5 bg-[#1e3a8a] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            </a>
+            <a href="{{ route('about') }}" class="nav-link font-semibold text-gray-900 relative overflow-hidden group {{ request()->routeIs('about') ? 'nav-link-active' : '' }}">
+                <span>About</span>
+                <span class="absolute left-0 bottom-0 w-full h-0.5 bg-[#1e3a8a] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            </a>
+
             <!-- Services Mega Menu -->
             <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                <a href="#" class="nav-link flex items-center" @click.prevent="open = !open">
+                <a href="/services" class="nav-link flex items-center font-semibold text-gray-900 relative overflow-hidden group" @click="open = true; $event.preventDefault();">
                     <span>Services</span>
-                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    <svg class="ml-1 w-4 h-4 transition-transform duration-300" :class="{ 'rotate-180': open || $el.parentElement.parentElement.classList.contains('group-hover') }" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-[#1e3a8a] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                 </a>
                 <div x-show="open" x-transition
                     class="fixed left-0 right-0 mx-auto top-[70px] max-w-screen-xl w-full bg-white text-black shadow-2xl rounded-2xl p-0 z-50 flex items-stretch"
@@ -84,45 +92,60 @@
                         </a> --}}
                     </div>
                     <!-- Right Columns -->
-                    <div class="flex-1 grid grid-cols-2 md:grid-cols-3 gap-8 p-8">
+                    <div class="flex-1 p-8">
                         <div>
-                            <h5 class="uppercase text-xs font-bold text-gray-500 mb-3">Consulting</h5>
-                            <ul class="space-y-2">
-                                <li><a href="#" class="hover:text-blue-600">Strategy</a></li>
-                                <li><a href="#" class="hover:text-blue-600">Operations</a></li>
-                                <li><a href="#" class="hover:text-blue-600">Digital</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h5 class="uppercase text-xs font-bold text-gray-500 mb-3">Audit & Assurance</h5>
-                            <ul class="space-y-2">
-                                <li><a href="#" class="hover:text-blue-600">Internal Audit</a></li>
-                                <li><a href="#" class="hover:text-blue-600">External Audit</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h5 class="uppercase text-xs font-bold text-gray-500 mb-3">Risk & Financial Advisory</h5>
-                            <ul class="space-y-2">
-                                <li><a href="#" class="hover:text-blue-600">Risk Management</a></li>
-                                <li><a href="#" class="hover:text-blue-600">Financial Planning</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h5 class="uppercase text-xs font-bold text-gray-500 mb-3">Other Services</h5>
-                            <ul class="space-y-2">
-                                <li><a href="#" class="hover:text-blue-600">AI & Analytics</a></li>
-                                <li><a href="#" class="hover:text-blue-600">Tax Services</a></li>
-                                <li><a href="#" class="hover:text-blue-600">M&A & Restructuring</a></li>
-                            </ul>
+                            <h5 class="uppercase text-xs font-bold text-gray-500 mb-3">Becker Services</h5>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                                <div>
+                                    <h6 class="text-sm font-bold text-[#1e3a8a] mb-2">Parts & Replacement</h6>
+                                    <ul class="space-y-2">
+                                        <li><a href="/services/spare-parts" class="hover:text-blue-600">Becker Spare Parts</a></li>
+                                        <li><a href="/services/replacement" class="hover:text-blue-600">Replacement</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h6 class="text-sm font-bold text-[#1e3a8a] mb-2">Maintenance & Repair</h6>
+                                    <ul class="space-y-2">
+                                        <li><a href="/services/inspection" class="hover:text-blue-600">Inspection</a></li>
+                                        <li><a href="/services/maintenance" class="hover:text-blue-600">Maintenance</a></li>
+                                        <li><a href="/services/repair" class="hover:text-blue-600">Repair</a></li>
+                                        <li><a href="/services/general-overhaul" class="hover:text-blue-600">General Overhaul</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h6 class="text-sm font-bold text-[#1e3a8a] mb-2">Service Operations</h6>
+                                    <ul class="space-y-2">
+                                        <li><a href="/services/in-house-service" class="hover:text-blue-600">In-house Service</a></li>
+                                        <li><a href="/services/field-service" class="hover:text-blue-600">Field Service</a></li>
+                                        <li><a href="/services/commissioning" class="hover:text-blue-600">Commissioning</a></li>
+                                        <li><a href="/services/rental-devices" class="hover:text-blue-600">Rental Devices</a></li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-col justify-between">
+                                    <div>
+                                        <h6 class="text-sm font-bold text-[#1e3a8a] mb-2">Support & Solutions</h6>
+                                        <ul class="space-y-2">
+                                            <li><a href="/services/technical-advice" class="hover:text-blue-600">Technical Advice</a></li>
+                                            <li><a href="/services/service-agreements" class="hover:text-blue-600">Service Agreements</a></li>
+                                        </ul>
+                                    </div>
+                                    <a href="/services" class="mt-6 inline-flex items-center px-4 py-2 bg-[#1e3a8a] text-white font-semibold rounded-full hover:bg-blue-700 transition self-end shadow">
+                                        View All Services
+                                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Products Mega Menu -->
             <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                <a href="#" class="nav-link flex items-center" @click.prevent="open = !open">
+                <a href="#" class="nav-link flex items-center font-semibold text-gray-900 relative overflow-hidden group" @click.prevent="open = !open">
                     <span>Products</span>
-                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    <svg class="ml-1 w-4 h-4 transition-transform duration-300" :class="{ 'rotate-180': open || $el.parentElement.parentElement.classList.contains('group-hover') }" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-[#1e3a8a] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                 </a>
                 <div x-show="open" x-transition
                     class="fixed left-0 right-0 mx-auto top-[70px] max-w-screen-xl w-full bg-white text-black shadow-2xl rounded-2xl p-0 z-50 flex items-stretch"
@@ -165,9 +188,14 @@
                     </div>
                 </div>
             </div>
-            <a href="{{ route('home') ? 'nav-link-active' : '' }}" class="nav-link"><span>Blog</span></a>
-            <a href="{{ route('home') ? 'nav-link-active' : '' }}" class="nav-link"><span>Contact</span></a>
-            <a href="{{ route('home') }}" class="nav-button">Get Started</a>
+            <a href="#" class="nav-link font-semibold text-gray-900 relative overflow-hidden group">
+                <span>Blog</span>
+                <span class="absolute left-0 bottom-0 w-full h-0.5 bg-[#1e3a8a] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            </a>
+            <a href="{{ route('contact') }}" class="nav-link font-semibold text-gray-900 relative overflow-hidden group {{ request()->routeIs('contact') ? 'nav-link-active' : '' }}">
+                <span>Contact</span>
+                <span class="absolute left-0 bottom-0 w-full h-0.5 bg-[#1e3a8a] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            </a>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -185,112 +213,99 @@
     </div>
 
     <!-- Mobile Navigation -->
-    <div class="md:hidden transition-all duration-300"
-         :class="{ 'bg-blue-600 text-white': isScrolled, 'bg-white text-gray-700': !isScrolled }"
-         x-show="isOpen"
+    <div class="md:hidden transition-all duration-300 fixed inset-0 z-50 overflow-y-auto h-screen bg-[#1e3a8a] text-white" x-show="isOpen"
          x-transition:enter="transition ease-out duration-200"
          x-transition:enter-start="opacity-0 -translate-y-1"
          x-transition:enter-end="opacity-100 translate-y-0"
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 translate-y-0"
-         x-transition:leave-end="opacity-0 -translate-y-1"
-    >
-        <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="{{ route('home') }}" class="block px-3 py-2 rounded-md {{ request()->routeIs('home') ? 'nav-link-active' : '' }}"
-               :class="{ 'hover:bg-blue-500': isScrolled, 'hover:bg-gray-100': !isScrolled }">Home</a>
-            <a href="{{ route('home') }}" class="block px-3 py-2 rounded-md {{ request()->routeIs('about') ? 'nav-link-active' : '' }}"
-               :class="{ 'hover:bg-blue-500': isScrolled, 'hover:bg-gray-100': !isScrolled }">About</a>
-            <!-- Services & Products Mega Menu Mobile -->
+         x-transition:leave-end="opacity-0 -translate-y-1">
+        <div class="px-6 pt-8 pb-8 space-y-2">
+            <div class="flex justify-left mb-6">
+                <img src="{{ asset('images/logo_footer_white.png') }}" alt="Becker Logo" class="h-12 w-auto">
+            </div>
+            <a href="{{ route('home') }}" class="block px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition">Home</a>
+            <a href="{{ route('about') }}" class="block px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition">About</a>
             <div x-data="{ open: false }">
-                <button @click="open = !open" class="block w-full text-left px-3 py-2 rounded-md focus:outline-none flex items-center justify-between"
-                    :class="{ 'hover:bg-blue-500': isScrolled, 'hover:bg-gray-100': !isScrolled }">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition focus:outline-none">
                     <span>Services</span>
-                    <svg :class="{ 'rotate-180': open }" class="ml-2 w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    <svg :class="{ 'rotate-180': open }" class="ml-2 w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                 </button>
-                <div x-show="open" x-transition class="pl-2 py-2 space-y-2 bg-white text-black rounded-2xl shadow-md mt-1" style="display: none;">
-                    <!-- Promo Card -->
-                    <div class="bg-[#e9e9e3] rounded-2xl p-4 mb-4">
-                        {{-- <div class="text-base font-semibold text-[#1e3a8a] mb-2">Fresh Perspectives, Unmatched Solutions</div>
-                        <a href="#" class="mt-4 inline-flex items-center px-4 py-2 bg-lime-400 text-[#1e3a8a] font-bold rounded-full hover:bg-lime-500 transition">
-                            View All
-                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-                        </a> --}}
+                <div x-show="open" x-transition class="mt-2 bg-white rounded-xl p-4 text-[#1e3a8a] shadow-lg">
+                    <h5 class="uppercase text-xs font-bold text-gray-500 mb-3">Becker Services</h5>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div>
+                            <h6 class="text-sm font-bold text-blue-900 mb-2">Parts & Replacement</h6>
+                            <ul class="space-y-1">
+                                <li><a href="/services/spare-parts" class="hover:text-blue-700">Becker Spare Parts</a></li>
+                                <li><a href="/services/replacement" class="hover:text-blue-700">Replacement</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="text-sm font-bold text-blue-900 mb-2">Maintenance & Repair</h6>
+                            <ul class="space-y-1">
+                                <li><a href="/services/inspection" class="hover:text-blue-700">Inspection</a></li>
+                                <li><a href="/services/maintenance" class="hover:text-blue-700">Maintenance</a></li>
+                                <li><a href="/services/repair" class="hover:text-blue-700">Repair</a></li>
+                                <li><a href="/services/general-overhaul" class="hover:text-blue-700">General Overhaul</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="text-sm font-bold text-blue-900 mb-2">Service Operations</h6>
+                            <ul class="space-y-1">
+                                <li><a href="/services/in-house-service" class="hover:text-blue-700">In-house Service</a></li>
+                                <li><a href="/services/field-service" class="hover:text-blue-700">Field Service</a></li>
+                                <li><a href="/services/commissioning" class="hover:text-blue-700">Commissioning</a></li>
+                                <li><a href="/services/rental-devices" class="hover:text-blue-700">Rental Devices</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="text-sm font-bold text-blue-900 mb-2">Support & Solutions</h6>
+                            <ul class="space-y-1">
+                                <li><a href="/services/technical-advice" class="hover:text-blue-700">Technical Advice</a></li>
+                                <li><a href="/services/service-agreements" class="hover:text-blue-700">Service Agreements</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        <h5 class="uppercase text-xs font-bold text-gray-500 mb-2">Services</h5>
-                        <ul class="space-y-1">
-                            <li><a href="#" class="hover:text-blue-600">Consulting</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Audit & Assurance</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Risk & Financial Advisory</a></li>
-                            <li><a href="#" class="hover:text-blue-600">AI & Analytics</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Tax Services</a></li>
-                            <li><a href="#" class="hover:text-blue-600">M&A & Restructuring</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h5 class="uppercase text-xs font-bold text-gray-500 mb-2">Products</h5>
-                        <ul class="space-y-1">
-                            <li><a href="#" class="hover:text-blue-600">Product One</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Product Two</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Product Three</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Product Four</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h5 class="uppercase text-xs font-bold text-gray-500 mb-2">More</h5>
-                        <ul class="space-y-1">
-                            <li><a href="#" class="hover:text-blue-600">Case Studies</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Resources</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Support</a></li>
-                        </ul>
-                    </div>
+                    <a href="/services" class="mt-6 inline-flex items-center px-4 py-2 bg-[#1e3a8a] text-white font-bold rounded-full hover:bg-blue-800 transition self-end shadow">
+                        View All Services
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </a>
                 </div>
             </div>
             <div x-data="{ open: false }">
-                <button @click="open = !open" class="block w-full text-left px-3 py-2 rounded-md focus:outline-none flex items-center justify-between"
-                    :class="{ 'hover:bg-blue-500': isScrolled, 'hover:bg-gray-100': !isScrolled }">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition focus:outline-none">
                     <span>Products</span>
-                    <svg :class="{ 'rotate-180': open }" class="ml-2 w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    <svg :class="{ 'rotate-180': open }" class="ml-2 w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                 </button>
-                <div x-show="open" x-transition class="pl-2 py-2 space-y-2 bg-white text-black rounded-2xl shadow-md mt-1" style="display: none;">
-                    <!-- Promo Card -->
-                    <div class="bg-[#e9e9e3] rounded-2xl p-4 mb-4">
-                        <div class="text-base font-semibold text-[#1e3a8a] mb-2">Discover Our Product Suite</div>
-                        <a href="#" class="mt-4 inline-flex items-center px-4 py-2 bg-lime-400 text-[#1e3a8a] font-bold rounded-full hover:bg-lime-500 transition">
-                            View All
-                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
+                <div x-show="open" x-transition class="mt-2 bg-[#17406b] rounded-xl p-4 text-white">
                     <div>
-                        <h5 class="uppercase text-xs font-bold text-gray-500 mb-2">Core Products</h5>
+                        <h5 class="uppercase text-xs font-bold text-gray-200 mb-3">Core Products</h5>
                         <ul class="space-y-1">
-                            <li><a href="#" class="hover:text-blue-600">Product One</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Product Two</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Product Three</a></li>
+                            <li><a href="#" class="hover:underline">Product One</a></li>
+                            <li><a href="#" class="hover:underline">Product Two</a></li>
+                            <li><a href="#" class="hover:underline">Product Three</a></li>
                         </ul>
                     </div>
                     <div>
-                        <h5 class="uppercase text-xs font-bold text-gray-500 mb-2">Add-ons</h5>
+                        <h5 class="uppercase text-xs font-bold text-gray-200 mb-3">Add-ons</h5>
                         <ul class="space-y-1">
-                            <li><a href="#" class="hover:text-blue-600">Add-on One</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Add-on Two</a></li>
+                            <li><a href="#" class="hover:underline">Add-on One</a></li>
+                            <li><a href="#" class="hover:underline">Add-on Two</a></li>
                         </ul>
                     </div>
                     <div>
-                        <h5 class="uppercase text-xs font-bold text-gray-500 mb-2">Resources</h5>
+                        <h5 class="uppercase text-xs font-bold text-gray-200 mb-3">Resources</h5>
                         <ul class="space-y-1">
-                            <li><a href="#" class="hover:text-blue-600">Documentation</a></li>
-                            <li><a href="#" class="hover:text-blue-600">API Reference</a></li>
-                            <li><a href="#" class="hover:text-blue-600">Support</a></li>
+                            <li><a href="#" class="hover:underline">Documentation</a></li>
+                            <li><a href="#" class="hover:underline">API Reference</a></li>
+                            <li><a href="#" class="hover:underline">Support</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <a href="{{ route('home') ? 'nav-link-active' : '' }}" class="block px-3 py-2 rounded-md"
-               :class="{ 'hover:bg-blue-500': isScrolled, 'hover:bg-gray-100': !isScrolled }">Blog</a>
-            <a href="{{ route('home') ? 'nav-link-active' : '' }}" class="block px-3 py-2 rounded-md"
-               :class="{ 'hover:bg-blue-500': isScrolled, 'hover:bg-gray-100': !isScrolled }">Contact</a>
-            <a href="{{ route('home') }}" class="block px-3 py-2 mt-4 text-center bg-primary text-white rounded-md hover:bg-primary-dark transition-colors duration-200">Get Started</a>
+            <a href="#" class="block px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition">Blog</a>
+            <a href="{{ route('contact') }}" class="block px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition">Contact</a>
         </div>
     </div>
 </nav>

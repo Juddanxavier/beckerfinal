@@ -1,6 +1,6 @@
 <!-- resources/views/partials/three-cards-section.blade.php -->
 
-<section class="py-16" data-aos="fade-up">
+<section class="py-16" data-aos="fade-up" data-aos-duration="1000">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap -mx-4">
 
