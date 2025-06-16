@@ -7,11 +7,11 @@
         <div class="max-w-7xl mx-auto py-16 px-4 flex flex-col items-start " data-aos="fade-up" data-aos-duration="800">
             <div class="flex flex-col md:flex-row">
                 <div class="w-full md:w-2/3">
-                    <h1 class="text-4xl md:text-5xl font-bold mt-12 mb-4 text-black leading-tight ">
+                    <h1 class="text-4xl md:text-5xl font-bold mt-12 mb-4 text-black leading-tight uppercase">
                         {{ $subcategory->name }}
                     </h1>
 
-                    <p class="mb-8 text-lg leading-relaxed text-gray-700">
+                    <p class="mb-8 leading-relaxed text-gray-700">
                         The claw vacuum pumps from Becker work according to the positive displacement principle. Comparable
                         to Becker's trusted
                         rotary vane vacuum pumps, our claw pumps are recognised as a dependable choice for demanding
@@ -20,14 +20,14 @@
 
 
                     </p>
-                    <p class="mb-8 text-lg leading-relaxed text-gray-700">
+                    <p class="mb-8 leading-relaxed text-gray-700">
                         The compression of the dry claw pumps is 100% oil-free and contact-free. To achieve this, two
                         claw-like rotors rotate in
                         opposite directions within the compression chamber without touching each other or the housing.
 
 
                     </p>
-                    <p class="mb-8 text-lg leading-relaxed text-gray-700">
+                    <p class="mb-8 leading-relaxed text-gray-700">
                         This makes these positive displacement pumps particularly low maintenance. The claw technology
                         ensures high efficiency,
                         and the low installed motor power ensures low energy consumption. With our focus on environmentally
