@@ -10,6 +10,9 @@
 </head>
 
 <body class="font-sans antialiased">
+    <div class="admin-logo-container">
+        <img src="/images/logo.png" alt="Admin Logo" class="h-12 w-auto">
+    </div>
     <div class="min-h-screen bg-gray-100">
         <!-- Admin-specific navigation, if any -->
 

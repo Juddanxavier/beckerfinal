@@ -28,6 +28,8 @@ class BeckeradminPanelProvider extends PanelProvider
             ->id('beckeradmin')
             ->path('beckeradmin')
             ->login()
+            ->brandLogo(asset('images/logo.svg'))
+            ->brandLogoHeight('2rem')
             ->colors([
                 'primary' => Color::Amber,
             ])
