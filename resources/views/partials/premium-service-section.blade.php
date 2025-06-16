@@ -5,7 +5,9 @@
         <div class="grid grid-cols-1 md:grid-cols-5 gap-16 items-center">
             <!-- Left Column: Text Content -->
             <div class="md:col-span-2 text-base text-gray-700 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                <h2 class="text-4xl md:text-4xl mb-6" data-aos="fade-up" data-aos-delay="150">Premium Service</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-black mb-6" data-aos="fade-up" data-aos-delay="150">
+                    Premium Service
+                </h2>
                 <p class="mb-6" data-aos="fade-up" data-aos-delay="200">
                     For us, a business relationship doesn't end with the purchase of an industrial pump for air
                     transportation or vacuum generation. We offer a broad range of services, including installation,
@@ -18,7 +20,7 @@
                     vacuum pump manufacturer.
                 </p>
                 <div class="mt-8" data-aos="zoom-in" data-aos-delay="300">
-                    <a href="#"
+                    <a href="{{ route('services') }}"
                         class="inline-block bg-[#1e3a8a] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#2563eb] transition">
                         Explore service offerings
                     </a>

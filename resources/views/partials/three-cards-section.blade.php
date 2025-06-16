@@ -10,13 +10,13 @@
                     class="group bg-[#F6F5F2] rounded-3xl p-8 h-full flex flex-col justify-between hover:bg-[#1e3a8a] hover:text-white transition-colors duration-200 cursor-pointer relative">
                     <div>
                         <span
-                            class="text-xs font-semibold text-gray-600 group-hover:text-white uppercase p-2 rounded-3xl outline mb-4">Quality
+                            class="text-xs text-gray-600 group-hover:text-white uppercase p-2 rounded-3xl outline outline-1 outline-gray-400 mb-4">Quality
                             Management</span>
-                        <h3 class="text-xl  text-gray-800 group-hover:text-white mt-4 mb-4 leading-tight">
+                        <h3 class="text-xl  text-gray-800 group-hover:text-white mt-4 mb-4 leading-tight font-bold">
                             We Prioritize Quality
                         </h3>
                         <div class="flex justify-end absolute top-8 right-8 z-10">
-                            <a href="#"
+                            <a href="{{ route('about') }}"
                                 class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow group-hover:bg-white transition-colors duration-200">
                                 {{-- Arrow Icon --}}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -45,13 +45,14 @@
                             <img src="{{ asset('images/homepage/becker-pumps-1951.jpg') }}" alt="Placeholder Image"
                                 class="w-full h-auto object-cover">
                         </div>
-                        <span class="text-xs font-semibold text-white uppercase p-2 rounded-3xl outline ">Company
+                        <span
+                            class="text-xs text-white group-hover:text-white uppercase p-2 rounded-3xl outline outline-1 outline-gray-400 mb-4">Company
                             History</span>
-                        <h3 class="text-xl mt-4 mb-4 leading-tight">A History of Innovation
+                        <h3 class="text-xl mt-4 mb-4 leading-tight font-bold">A History of Innovation
                         </h3>
                     </div>
                     <div class="mt-auto flex justify-end">
-                        <a href="#"
+                        <a href="{{ route('about') }}"
                             class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow group-hover:bg-white transition-colors duration-200">
                             {{-- Arrow Icon --}}
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -68,12 +69,12 @@
                     class="group bg-[#F6F5F2] rounded-3xl p-8 h-full flex flex-col justify-between hover:bg-[#1e3a8a] text-white transition-colors duration-200 cursor-pointer relative">
                     <div>
                         <span
-                            class="text-xs font-semibold text-[#08122A] group-hover:text-white uppercase p-2 rounded-3xl outline ">Becker
+                            class="text-xs text-gray-600 group-hover:text-white uppercase p-2 rounded-3xl outline outline-1 outline-gray-400 mb-4">Becker
                             Worldwide</span>
-                        <h3 class="text-xl text-[#08122A] group-hover:text-white mt-4 mb-4 leading-tight">
+                        <h3 class="text-xl text-[#08122A] group-hover:text-white mt-4 mb-4 leading-tight font-bold">
                             A Global Brand</h3>
                         <div class="flex justify-end absolute top-6 right-8 z-10">
-                            <a href="#"
+                            <a href="{{ route('about') }}"
                                 class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow group-hover:bg-[green-700] transition-colors duration-200">
                                 {{-- Arrow Icon --}}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">

@@ -1,10 +1,12 @@
 <section class="py-16 bg-[#F6F5F2]" data-aos="fade-up" data-aos-duration="1000">
     <div class="container mx-auto px-4">
         <div class="flex flex-col items-center mb-12">
-            <span class="px-4 py-1 rounded-full bg-gray-100 text-gray-700 text-xs font-semibold mb-4">Industries We
+            <span
+                class="px-4 py-1 rounded-full bg-gray-100 text-gray-700 text-md outline outline-1 outline-gray-500 font-semibold mb-4">Industries
+                We
                 Serve
             </span>
-            <h2 class="text-4xl md:text-5xl font-normal text-center mb-4">Discover how Becker's vacuum
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">Discover how Becker's vacuum
                 solutions
                 empower
                 <br>various industries worldwide.
@@ -85,7 +87,7 @@
         <div class="flex justify-center">
             <div class="mt-8">
                 <a href="{{ route('services') }}"
-                    class="inline-block bg-[#1e3a8a] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#004a6b] transition">
+                    class="inline-block bg-[#1e3a8a] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#2563eb] transition">
                     Explore Our Services
                 </a>
             </div>

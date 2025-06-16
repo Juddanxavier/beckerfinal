@@ -6,7 +6,7 @@
                 <span
                     class="inline-block px-4 py-1 rounded-full bg-gray-200 w-fit text-gray-700 text-xs font-semibold mb-4">SCHEDULE
                     CONSULTATION</span>
-                <h2 class="text-4xl font-bold text-[#23403A] mb-4">Let's Connect</h2>
+                <h2 class="text-4xl font-bold text-black mb-4">Let's Connect</h2>
                 <p class="text-gray-700 mb-8">Connect with our experts for a free consultation and tailored solutions.
                 </p>
 

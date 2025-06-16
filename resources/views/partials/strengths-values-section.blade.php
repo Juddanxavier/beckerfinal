@@ -10,7 +10,7 @@
 
             <!-- Right Column: Text Content -->
             <div class="md:col-span-1 text-base text-gray-700 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                <h2 class="text-4xl md:text-5xl text-[#23403A] mb-4" data-aos="fade-up" data-aos-delay="250">Our
+                <h2 class="text-4xl md:text-5xl text-black font-bold mb-4" data-aos="fade-up" data-aos-delay="250">Our
                     Strengths and Values</h2>
                 <p class="mb-6" data-aos="fade-up" data-aos-delay="300">As specialists in industrial vacuum pump
                     manufacturing, we pride ourselves on high innovation, cutting-edge production technologies, and
@@ -20,7 +20,7 @@
                 <p class="mb-6" data-aos="fade-up" data-aos-delay="350">People are at the heart of what we do. That's
                     why we provide our customers with tailored solutions and services, ensuring high system efficiency
                     and maximum energy savings.</p>
-                <p class="text-left font-semibold text-gray-800 mt-8" data-aos="fade-up" data-aos-delay="400">CEO Dr.
+                <p class="text-left font-bold text-[#1e3a8a] mt-8" data-aos="fade-up" data-aos-delay="400">CEO Dr.
                     Dorothee Becker</p>
             </div>
         </div>

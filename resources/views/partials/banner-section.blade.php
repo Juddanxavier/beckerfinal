@@ -17,7 +17,8 @@
 
                 <!-- Right Side - Stats or Additional Content -->
                 <div class="md:w-1/2 mb-8 md:mb-0 px-4" data-aos="fade-left" data-aos-delay="200">
-                    <h2 class="text-4xl mb-4" data-aos="fade-up" data-aos-delay="250">Transform Your Business Today</h2>
+                    <h2 class="text-4xl mb-4 font-bold" data-aos="fade-up" data-aos-delay="250">Transform Your Business
+                        Today</h2>
                     <p class="text-lg text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="300">Discover innovative
                         solutions that drive growth and efficiency. Our expert team is ready to help you achieve your
                         business goals.</p>

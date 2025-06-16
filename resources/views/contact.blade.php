@@ -3,7 +3,7 @@
 @section('content')
     <section class="bg-gradient-to-br from-[#F6F5F2] to-white py-16" data-aos="fade-up" data-aos-duration="1000">
         <div class="max-w-7xl mx-auto py-16 px-4 flex flex-col items-start ">
-            <h1 class="text-5xl my-8 text-[#234039] leading-tight ">
+            <h1 class="text-4xl md:text-5xl my-8 text-[#234039] leading-tight font-bold">
                 Contact <span class="text-[#1e3a8a]">Becker India</span>
             </h1>
             <div class="w-full mt-4">

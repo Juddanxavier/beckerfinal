@@ -5,9 +5,11 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <!-- Left Column: Heading and Subtitle -->
             <div class="md:col-span-1" data-aos="fade-up" data-aos-delay="100">
-                <h2 class="text-4xl md:text-5xl text-[#23403A] mb-4">140+ Years of Engineering Excellence in
+                <h2 class="text-4xl md:text-5xl text-[#23403A] mb-4 font-bold text-black">140+ Years of Engineering
+                    Excellence in
                     Air Technology</h2>
-                <p class="text-xl text-gray-700">Built on Generations of Trust and Technological Leadership
+                <p class="text-xl text-gray-700 font-semibold">Built on Generations of Trust and Technological
+                    Leadership
                 </p>
             </div>
 

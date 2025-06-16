@@ -1,30 +1,21 @@
-/** @type {import('tailwindcss').Config} */
-import defaultTheme from "tailwindcss/defaultTheme";
+import defaultTheme from 'tailwindcss/defaultTheme';
+import forms from '@tailwindcss/forms';
 
+/** @type {import('tailwindcss').Config} */
 export default {
     content: [
-        "./resources/**/*.blade.php",
-        "./resources/**/*.js",
-        "./resources/**/*.vue",
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './storage/framework/views/*.php',
+        './resources/views/**/*.blade.php',
     ],
+
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Work Sans", ...defaultTheme.fontFamily.sans],
-                // Add your theme's fonts here if different from sans
-                // heading: ['Your Heading Font', ...defaultTheme.fontFamily.sans],
-            },
-            colors: {
-                // ... existing code ...
-            },
-            animation: {
-                // ... existing code ...
-            },
-            keyframes: {
-                // ... existing code ...
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
     },
-    plugins: [],
+
+    plugins: [forms],
 };
-// Remember: Install Work Sans via npm (npm install @fontsource/work-sans) or import via CDN in your CSS or HTML.

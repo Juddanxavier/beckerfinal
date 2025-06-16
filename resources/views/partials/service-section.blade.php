@@ -2,8 +2,8 @@
     <div class="max-w-7xl mx-auto px-6">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mt-12">
             <div class="flex-1">
-                <h2 class="text-4xl mb-6">
-                    <span class="text-[#1e3a8a]">Premium</span>
+                <h2 class="text-4xl md:text-5xl mb-6 font-bold">
+                    <span class="text-black">Premium</span>
                     <span class="text-[#1e3a8a]">Service</span>
                 </h2>
                 <p class="text-lg text-[#234039] mb-8 max-w-2xl">
@@ -73,8 +73,8 @@
 
 <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-lg md:text-4xl font-semibold text-[#1e3a8a] mb-2 ">Our Services</h2>
-        <h3 class="text-lg md:text-4xl font-semibold text-[#1e3a8a] mb-10 ">Vacuum Pump Repair & Service</h3>
+        <h2 class="text-4xl md:text-5xl font-bold text-black mb-2 ">Our Services</h2>
+        <h3 class="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-10 ">Vacuum Pump Repair & Service</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <!-- Card 1 -->
             <a href="/services/spare-parts"
@@ -202,7 +202,7 @@
 
 <section class="py-16 bg-[#f7f7f7]">
     <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-2xl md:text-3xl font-extrabold text-[#1e3a8a] mb-8" data-aos="fade-up" data-aos-delay="0">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-[#1e3a8a] mb-8" data-aos="fade-up" data-aos-delay="0">
             Frequently
             Asked Questions
         </h2>

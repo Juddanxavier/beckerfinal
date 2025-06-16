@@ -2,9 +2,10 @@
 
 @section('content')
     <div class="bg-gradient-to-br from-[#F6F5F2] to-white min-h-screen">
+
         <div class="max-w-7xl mx-auto py-16 px-4 flex flex-col items-start " data-aos="fade-up" data-aos-duration="800">
 
-            <h1 class="text-5xl my-8 text-[#234039] leading-tight ">
+            <h1 class="text-4xl md:text-5xl my-8 text-black font-bold leading-tight ">
                 Becker <span class="text-[#1e3a8a]">Your leading manufacturer</span><br />
                 of vacuum pumps
             </h1>
@@ -39,7 +40,7 @@
                 <div class="rounded-3xl bg-[#2549b1] p-8 flex flex-col text-white relative min-h-[350px]">
                     {{-- <span class="absolute top-6 right-6 text-2xl">*</span> --}}
                     <span
-                        class="inline-block mb-4 px-4 py-1 rounded-full bg-[#2549b1]/50 border border-white/50 text-white text-xs font-semibold w-fit">Promise</span>
+                        class="inline-block mb-4 px-4 py-1 rounded-full bg-[#2549b1]/50 border border-white/50 text-white text-xs font-bold w-fit">Promise</span>
                     <h3 class="text-2xl font-bold mb-4">Our Promises</h3>
                     <p class="text-base mb-6">As a global market leader and experienced vacuum pump manufacturer, we set the
                         standard in air transportation. Our vision and guiding principle, "We make our customers winners
@@ -50,7 +51,7 @@
                         We provide real value to our customers and enable their success in their markets. Trust Becker, your
                         partner and solutions provider for innovative products and a renowned manufacturer of vacuum pumps.
                     </p>
-                    <a href="/about"
+                    <a href="{{ route('about') }}"
                         class="mt-auto inline-block bg-white text-[#234039] font-semibold py-2 px-6 rounded-full shadow hover:bg-gray-100 transition w-fit">Learn
                         More</a>
                 </div>
@@ -101,7 +102,7 @@
                         vacuum pump
                         manufacturer.
                     </p>
-                    <a href="/about"
+                    <a href="{{ route('services') }}"
                         class="mt-auto inline-block bg-white text-[#234039] font-semibold py-2 px-6 rounded-full shadow hover:bg-gray-100 transition w-fit">Explore
                         All Services</a>
                 </div>
