@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\DownloadController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -45,6 +46,10 @@ Route::post('/contact', [ContactController::class, 'send'])->name('contact.send'
 // Blog Routes
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{blog}', [BlogController::class, 'show'])->name('blog.show');
+
+// Download Routes
+Route::get('/downloads', [DownloadController::class, 'index'])->name('downloads.index');
+Route::get('/downloads/{download}/download', [DownloadController::class, 'downloadFile'])->name('downloads.download');
 
 // Product Routes
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');

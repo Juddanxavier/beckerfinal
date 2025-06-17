@@ -64,7 +64,6 @@
                     class="absolute left-0 bottom-0 w-full h-0.5 bg-[#1e3a8a] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </a>
 
-
             <!-- Services Mega Menu -->
             <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
                 <a href="/services"
@@ -213,6 +212,12 @@ $productCategories = Category::with('subcategories')->orderBy('name')->get();
                 <span
                     class="absolute left-0 bottom-0 w-full h-0.5 bg-[#1e3a8a] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </a>
+            <a href="{{ route('downloads.index') }}"
+                class="nav-link font-semibold text-gray-900 relative overflow-hidden group {{ request()->routeIs('downloads.index') ? 'nav-link-active' : '' }}">
+                <span>Downloads</span>
+                <span
+                    class="absolute left-0 bottom-0 w-full h-0.5 bg-[#1e3a8a] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            </a>
             <a href="{{ route('contact') }}"
                 class="nav-link font-semibold text-gray-900 relative overflow-hidden group {{ request()->routeIs('contact') ? 'nav-link-active' : '' }}">
                 <span>Contact</span>
@@ -349,6 +354,8 @@ $productCategories = Category::with('subcategories')->orderBy('name')->get();
             </div>
             <a href="{{ route('blog.index') }}"
                 class="block px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition">Blog</a>
+            <a href="{{ route('downloads.index') }}"
+                class="block px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition">Downloads</a>
             <a href="{{ route('contact') }}"
                 class="block px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition">Contact</a>
         </div>
