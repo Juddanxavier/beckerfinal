@@ -64,6 +64,7 @@
                     class="absolute left-0 bottom-0 w-full h-0.5 bg-[#1e3a8a] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </a>
 
+
             <!-- Services Mega Menu -->
             <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
                 <a href="/services"
@@ -168,8 +169,7 @@ use App\Models\Category;
 $productCategories = Category::with('subcategories')->orderBy('name')->get();
             ?>
             <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                <a href="{{ route('products.index') }}"
-                    class="nav-link flex items-center font-semibold text-gray-900 relative overflow-hidden group"
+                <a href="" class="nav-link flex items-center font-semibold text-gray-900 relative overflow-hidden group"
                     @click="open = !open">
                     <span>Products</span>
                     <svg class="ml-1 w-4 h-4 transition-transform duration-300"
@@ -249,6 +249,8 @@ $productCategories = Category::with('subcategories')->orderBy('name')->get();
                 class="block px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition">Home</a>
             <a href="{{ route('about') }}"
                 class="block px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition">About</a>
+            <a href="/services"
+                class="block px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition">Services</a>
             <div x-data="{ open: false }">
                 <button @click="open = !open"
                     class="w-full flex items-center justify-between px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition focus:outline-none">
@@ -311,7 +313,7 @@ $productCategories = Category::with('subcategories')->orderBy('name')->get();
                 </div>
             </div>
             <div x-data="{ open: false }">
-                <a href="{{ route('products.index') }}" @click="open = !open"
+                <a href="" @click="open = !open"
                     class="w-full flex items-center justify-between px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition focus:outline-none">
                     <span>Products</span>
                     <svg :class="{ 'rotate-180': open }" class="ml-2 w-5 h-5 transition-transform duration-300"
@@ -335,14 +337,14 @@ $productCategories = Category::with('subcategories')->orderBy('name')->get();
                             </div>
                         @endforeach
                     </div>
-                    <a href="{{ route('products.index') }}"
+                    {{-- <a href="{{ route('products.index') }}"
                         class="mt-6 inline-flex items-center px-4 py-2 bg-[#1e3a8a] text-white font-bold rounded-full hover:bg-blue-800 transition self-end shadow">
                         View All Products
                         <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
-                    </a>
+                    </a> --}}
                 </div>
             </div>
             <a href="{{ route('blog.index') }}"

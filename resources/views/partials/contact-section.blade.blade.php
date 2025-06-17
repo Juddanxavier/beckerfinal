@@ -1,7 +1,7 @@
 <!-- Right Side - Image and Call to Action -->
 <div
-    class="w-full md:w-1/2 relative p-8 md:p-12 bg-[#8ac540] text-white flex flex-col justify-center items-center text-center">
-    <h2 class="text-2xl md:text-3xl font-bold mb-8 text-[#2a3c5a]">YOU WOULD LIKE TO CONTACT US DIRECTLY?</h2>
+    class="w-full md:w-1/2 relative p-8 md:p-12 bg-[#1e3a8a] text-white flex flex-col justify-center items-center text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-8 text-black">YOU WOULD LIKE TO CONTACT US DIRECTLY?</h2>
 
     <div class="mb-8">
         <p class="text-lg font-semibold mb-2">Gebr Becker India Vacuum Pumps Pvt. Ltd.</p>

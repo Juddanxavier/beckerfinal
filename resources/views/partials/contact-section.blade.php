@@ -49,8 +49,8 @@
 
             <!-- Right Side - Image and Call to Action -->
             <div
-                class="w-full md:w-1/2 relative p-8 md:p-12 bg-[#8ac540] text-white flex flex-col justify-center items-center text-center">
-                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-[#2a3c5a]">YOU WOULD LIKE TO CONTACT US DIRECTLY?
+                class="w-full md:w-1/2 relative p-8 md:p-12 bg-[#2563eb] text-white flex flex-col justify-center items-center text-center">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-white">YOU WOULD LIKE TO CONTACT US DIRECTLY?
                 </h2>
 
                 <div class="mb-8">
@@ -78,7 +78,7 @@
                     </div>
                 </div>
 
-                <h3 class="text-2xl font-bold mb-4 text-[#2a3c5a]">BECKER REPRESENTATIVE</h3>
+                <h3 class="text-2xl font-bold mb-4 text-white">BECKER REPRESENTATIVE</h3>
                 <p class="text-lg leading-relaxed">
                     Here you can find the contact close to you, because our support is available almost
                     everywhere in the world. <span class="font-bold">We are here for you!</span>

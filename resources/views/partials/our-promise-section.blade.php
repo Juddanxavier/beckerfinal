@@ -22,7 +22,8 @@
             <!-- Right Column: List of Vacuum Pump Types -->
             <div class="md:col-span-1 flex items-center text-lg justify-center" data-aos="fade-up" data-aos-delay="200">
                 <ul>
-                    <li class="flex items-center mb-4 cursor-pointer hover:bg-gray-200 hover:text-[#1e3a8a]">
+                    <li
+                        class="flex items-center mb-4 cursor-pointer font-semibold hover:bg-gray-200 hover:text-[#1e3a8a] capitalize">
                         {{-- Placeholder Icon --}}
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 mr-2 text-[#1e3a8a]">
@@ -31,7 +32,8 @@
                         </svg>
                         Dry-running rotary vane vacuum pumps
                     </li>
-                    <li class="flex items-center mb-4 cursor-pointer hover:bg-gray-200 hover:text-[#1e3a8a]">
+                    <li
+                        class="flex items-center mb-4 cursor-pointer font-semibold hover:bg-gray-200 hover:text-[#1e3a8a] capitalize">
                         {{-- Placeholder Icon --}}
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 mr-2 text-[#1e3a8a]">
@@ -40,7 +42,8 @@
                         </svg>
                         Oil-lubricated rotary vane vacuum pumps
                     </li>
-                    <li class="flex items-center mb-4 cursor-pointer hover:bg-gray-200 hover:text-[#1e3a8a]">
+                    <li
+                        class="flex items-center mb-4 cursor-pointer font-semibold hover:bg-gray-200 hover:text-[#1e3a8a] capitalize">
                         {{-- Placeholder Icon --}}
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 mr-2 text-[#1e3a8a]">
@@ -49,7 +52,8 @@
                         </svg>
                         Screw vacuum pumps
                     </li>
-                    <li class="flex items-center mb-4 cursor-pointer hover:bg-gray-200 hover:text-[#1e3a8a]">
+                    <li
+                        class="flex items-center mb-4 cursor-pointer font-semibold hover:bg-gray-200 hover:text-[#1e3a8a] capitalize">
                         {{-- Placeholder Icon --}}
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 mr-2 text-[#1e3a8a]">
@@ -58,7 +62,8 @@
                         </svg>
                         Claw vacuum pumps
                     </li>
-                    <li class="flex items-center mb-4 cursor-pointer hover:bg-gray-200 hover:text-[#1e3a8a]">
+                    <li
+                        class="flex items-center mb-4 cursor-pointer font-semibold hover:bg-gray-200 hover:text-[#1e3a8a] capitalize">
                         {{-- Placeholder Icon --}}
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 mr-2 text-[#1e3a8a]">
@@ -67,7 +72,8 @@
                         </svg>
                         Roots booster vacuum pumps
                     </li>
-                    <li class="flex items-center mb-4 cursor-pointer hover:bg-gray-200 hover:text-[#1e3a8a]">
+                    <li
+                        class="flex items-center mb-4 cursor-pointer font-semibold hover:bg-gray-200 hover:text-[#1e3a8a] capitalize">
                         {{-- Placeholder Icon --}}
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 mr-2 text-[#1e3a8a]">
@@ -76,7 +82,8 @@
                         </svg>
                         Side channel blowers
                     </li>
-                    <li class="flex items-center mb-4 cursor-pointer hover:bg-gray-200 hover:text-[#1e3a8a]">
+                    <li
+                        class="flex items-center mb-4 cursor-pointer font-semibold hover:bg-gray-200 hover:text-[#1e3a8a] capitalize">
                         {{-- Placeholder Icon --}}
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 mr-2 text-[#1e3a8a]">
@@ -85,7 +92,8 @@
                         </svg>
                         Radial blowers
                     </li>
-                    <li class="flex items-center mb-4 cursor-pointer hover:bg-gray-200 hover:text-[#1e3a8a]">
+                    <li
+                        class="flex items-center mb-4 cursor-pointer font-semibold hover:bg-gray-200 hover:text-[#1e3a8a] capitalize">
                         {{-- Placeholder Icon --}}
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 mr-2 text-[#1e3a8a]">

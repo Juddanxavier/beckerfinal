@@ -1,5 +1,5 @@
 <footer class="bg-white text-white pt-16">
-    <div class=" px-4 ">
+    <div>
         <div class="px-4 bg-[#2549b1] pt-24 rounded-t-2xl ">
             <div class="grid grid-cols-2 gap-4 mt-8 container mx-auto px-4 max-w-screen-xl">
                 <div class="flex justify-right w-full">
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div
-            class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 border-b border-white/10 bg-[#1e3a8a] py-12 px-4">
+            class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 border-b border-white/10 bg-[#1e3a8a] py-12 px-8">
             <!-- Logo and Contact -->
             <div class="col-span-1 md:col-span-3 lg:col-span-2 flex flex-col items-start">
                 <div class="flex items-center mb-6">
@@ -41,40 +41,52 @@
                 </div>
             </div>
 
-            <!-- Industries Links -->
+            <!-- Categories Links -->
             <div class="col-span-1">
-                <h4 class="text-xl font-semibold mb-4">Industries</h4>
+                <h4 class="text-xl font-semibold mb-4">Categories</h4>
                 <ul>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">Automotive</a>
-                    </li>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">Defense,
-                            Security & Justice</a></li>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">Energy &
-                            Chemicals</a></li>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">Health
-                            Care</a></li>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">Investment
-                            Management</a></li>
-                    <li class="mb-2"><a href="#"
-                            class="text-white/80 hover:text-white transition-colors">Telecommunications</a></li>
+                    {{-- To make these links dynamic, you would need to pass a collection of categories to this partial
+                    from your view or a View Composer. --}}
+                    {{-- Example of how to loop through categories if passed: --}}
+                    @foreach($categories as $category)
+                        <li class="mb-2"><a href="{{ route('products.by-category', $category->slug) }}"
+                                class="text-white/80 hover:text-white transition-colors">{{ $category->name }}</a></li>
+                    @endforeach
+                    {{-- <li class="mb-2"><a href="{{ route('products.index') }}"
+                            class="text-white/80 hover:text-white transition-colors">All Products</a></li> --}}
                 </ul>
             </div>
 
             <!-- Services Links -->
             <div class="col-span-1">
                 <h4 class="text-xl font-semibold mb-4">Services</h4>
-                <ul>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">Consulting</a>
-                    </li>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">Audit &
-                            Assurance</a></li>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">Risk &
-                            Financial Advisory</a></li>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">AI &
-                            Analytics</a></li>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">M&A &
-                            Restructuring</a></li>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">Tax</a></li>
+                <ul class="grid grid-cols-2 gap-x-12">
+                    <li class="mb-2"><a href="{{ route('services') }}"
+                            class="text-white/80 hover:text-white transition-colors">Our Services</a></li>
+                    <li class="mb-2"><a href="{{ url('/services/spare-parts') }}"
+                            class="text-white/80 hover:text-white transition-colors">Spare Parts</a></li>
+                    <li class="mb-2"><a href="{{ url('/services/in-house-service') }}"
+                            class="text-white/80 hover:text-white transition-colors">In-House Service</a></li>
+                    <li class="mb-2"><a href="{{ url('/services/field-service') }}"
+                            class="text-white/80 hover:text-white transition-colors">Field Service</a></li>
+                    <li class="mb-2"><a href="{{ url('/services/commissioning') }}"
+                            class="text-white/80 hover:text-white transition-colors">Commissioning</a></li>
+                    <li class="mb-2"><a href="{{ url('/services/inspection') }}"
+                            class="text-white/80 hover:text-white transition-colors">Inspection</a></li>
+                    <li class="mb-2"><a href="{{ url('/services/maintenance') }}"
+                            class="text-white/80 hover:text-white transition-colors">Maintenance</a></li>
+                    <li class="mb-2"><a href="{{ url('/services/repair') }}"
+                            class="text-white/80 hover:text-white transition-colors">Repair</a></li>
+                    <li class="mb-2"><a href="{{ url('/services/general-overhaul') }}"
+                            class="text-white/80 hover:text-white transition-colors">General Overhaul</a></li>
+                    <li class="mb-2"><a href="{{ url('/services/technical-advice') }}"
+                            class="text-white/80 hover:text-white transition-colors">Technical Advice</a></li>
+                    <li class="mb-2"><a href="{{ url('/services/rental-devices') }}"
+                            class="text-white/80 hover:text-white transition-colors">Rental Devices</a></li>
+                    <li class="mb-2"><a href="{{ url('/services/replacement') }}"
+                            class="text-white/80 hover:text-white transition-colors">Replacement</a></li>
+                    <li class="mb-2"><a href="{{ url('/services/service-agreements') }}"
+                            class="text-white/80 hover:text-white transition-colors">Service Agreements</a></li>
                 </ul>
             </div>
 
@@ -82,16 +94,18 @@
             <div class="col-span-1">
                 <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
                 <ul>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">Our
-                            philosophy</a></li>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">Insights</a>
-                    </li>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">Success
-                            story</a></li>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">Careers</a>
-                    </li>
-                    <li class="mb-2"><a href="#" class="text-white/80 hover:text-white transition-colors">Our team</a>
-                    </li>
+                    <li class="mb-2"><a href="{{ route('home') }}"
+                            class="text-white/80 hover:text-white transition-colors">Home</a></li>
+                    <li class="mb-2"><a href="{{ route('about') }}"
+                            class="text-white/80 hover:text-white transition-colors">About</a></li>
+                    <li class="mb-2"><a href="{{ route('services') }}"
+                            class="text-white/80 hover:text-white transition-colors">Services</a></li>
+                    <li class="mb-2"><a href="{{ route('blog.index') }}"
+                            class="text-white/80 hover:text-white transition-colors">Blogs</a></li>
+                    <li class="mb-2"><a href="{{ url('/careers') }}"
+                            class="text-white/80 hover:text-white transition-colors">Careers</a></li>
+                    <li class="mb-2"><a href="{{ route('contact') }}"
+                            class="text-white/80 hover:text-white transition-colors">Contact</a></li>
                 </ul>
             </div>
         </div>
