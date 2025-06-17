@@ -6,6 +6,7 @@
 
     @include('partials.three-cards-section')
 
+    @include('partials.variair-central-system')
 
     @include('partials.our-promise-section')
 

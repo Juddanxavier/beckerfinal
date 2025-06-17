@@ -48,20 +48,41 @@
             </div>
 
             <!-- Right Side - Image and Call to Action -->
-            <div class="w-full md:w-1/2 relative">
-                <img src="{{ asset('images/homepage/meeting.jpg') }}" alt="Meeting" class="w-full h-full object-cover">
-                <div class="absolute bottom-8 left-8 bg-white rounded-full px-6 py-4 flex items-center shadow-lg">
-                    <div class="w-10 h-10 rounded-full bg-[#2563eb] flex items-center justify-center mr-4">
-                        {{-- Phone Icon --}}
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.135l-2.596 1.584a1 1 0 00-.796 1.12l.924 3.084a1 1 0 001.113.713l3.084-.924a1 1 0 001.12-.796l1.584-2.596a1 1 0 011.135-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            <div
+                class="w-full md:w-1/2 relative p-8 md:p-12 bg-[#8ac540] text-white flex flex-col justify-center items-center text-center">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-[#2a3c5a]">YOU WOULD LIKE TO CONTACT US DIRECTLY?
+                </h2>
+
+                <div class="mb-8">
+                    <p class="text-lg font-semibold mb-2">Gebr Becker India Vacuum Pumps Pvt. Ltd.</p>
+                    <p class="text-md leading-relaxed">
+                        Office No.2, Bandal Capital, Near Kothrud Depot, Paud Road,<br>
+                        Kothrud, Pune, Maharashtra<br>
+                        INDIA
+                    </p>
+                </div>
+
+                <div class="mb-10">
+                    <p class="text-xl font-bold mb-2">T +91 8956439335</p>
+                    <p class="text-xl font-bold"><a href="mailto:info@becker-india.com"
+                            class="underline">info@becker-india.com</a></p>
+                </div>
+
+                <div class="flex justify-center mb-4">
+                    <div class="w-20 h-20 rounded-full flex items-center justify-center bg-white bg-opacity-20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7a3 3 0 100 6 3 3 0 000-6z" />
                         </svg>
                     </div>
-                    <p class="text-gray-700 text-sm">Call us at <span class="font-semibold">(101) 500 0200</span> or
-                        fill out our form, <br />and we'll contact you within one business day.</p>
                 </div>
+
+                <h3 class="text-2xl font-bold mb-4 text-[#2a3c5a]">BECKER REPRESENTATIVE</h3>
+                <p class="text-lg leading-relaxed">
+                    Here you can find the contact close to you, because our support is available almost
+                    everywhere in the world. <span class="font-bold">We are here for you!</span>
+                </p>
             </div>
         </div>
     </div>
