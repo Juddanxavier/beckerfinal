@@ -3,7 +3,7 @@
 <section class="relative h-screen flex items-center overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
     {{-- Replace with the actual path to your theme's hero background image --}}
     <img src="{{ asset('images/homepage/CoverSlide.png') }}" alt="Hero Background"
-        class="absolute inset-0 w-full h-full object-cover rounded-4xl p-3">
+        class="absolute inset-0 w-full h-full object-cover rounded-4xl ">
 
     {{-- Background Overlay --}}
     {{-- <div class="absolute inset-0 bg-black opacity-80 "></div>
