@@ -13,6 +13,5 @@ class Download extends Model
         'title',
         'description',
         'file_path',
-        'thumbnail_path',
     ];
 }

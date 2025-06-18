@@ -8,9 +8,17 @@ use Illuminate\Support\Facades\Storage;
 
 class DownloadController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $downloads = Download::orderBy('title')->get();
+        $query = Download::orderBy('title');
+        if ($request->filled('search')) {
+            $search = $request->input('search');
+            $query->where(function($q) use ($search) {
+                $q->where('title', 'like', "%{$search}%")
+                  ->orWhere('description', 'like', "%{$search}%");
+            });
+        }
+        $downloads = $query->paginate(10)->withQueryString();
 
         $breadcrumbs = [
             ['title' => 'Downloads']
@@ -21,6 +29,8 @@ class DownloadController extends Controller
 
     public function downloadFile(Download $download)
     {
-        return Storage::disk('public')->download($download->file_path, $download->title);
+        $filePath = $download->file_path;
+        $fileName = basename($filePath);
+        return Storage::disk('public')->download($filePath, $fileName);
     }
 }

@@ -31,15 +31,10 @@ class DownloadResource extends Resource
                     ->cols(10)
                     ->nullable(),
                 Forms\Components\FileUpload::make('file_path')
-                    ->label('Brochure File (PDF, DOCX, etc.)')
-                    ->directory('downloads') // Stores in storage/app/public/downloads
-                    ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
+                    ->label('Brochure File (PDF)')
+                    ->directory('downloads')
+                    ->acceptedFileTypes(['application/pdf'])
                     ->required(),
-                Forms\Components\FileUpload::make('thumbnail_path')
-                    ->label('Thumbnail Image')
-                    ->image()
-                    ->directory('downloads/thumbnails') // Stores in storage/app/public/downloads/thumbnails
-                    ->nullable(),
             ]);
     }
 
@@ -52,9 +47,6 @@ class DownloadResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('description')
                     ->limit(50),
-                Tables\Columns\ImageColumn::make('thumbnail_path')
-                    ->label('Thumbnail')
-                    ->circular(),
                 Tables\Columns\TextColumn::make('file_path')
                     ->label('File')
                     ->formatStateUsing(fn (string $state): string => basename($state)),
