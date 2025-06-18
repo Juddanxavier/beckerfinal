@@ -27,10 +27,17 @@
             @else
                 <ul class="w-full divide-y divide-gray-300 rounded-lg bg-white">
                     @foreach($downloads as $download)
-                        <li class="flex flex-col md:flex-row items-start md:items-center justify-between p-6 border-b last:border-b-0" data-aos="fade-up">
+                        <li class="flex flex-col md:flex-row items-start md:items-center justify-between p-6 rounded-lg border" data-aos="fade-up">
                             <div class="flex-1 min-w-0">
                                 <div class="flex items-center space-x-2 mb-2">
                                     <span class="text-lg font-semibold text-gray-800 capitalize">{{ $download->title }}</span>
+                                    <span class="text-xs text-gray-400 flex items-center gap-1">
+                                        <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" fill="#fff" stroke="#ef4444" stroke-width="2"/>
+                                            <path d="M8 16V8h1.5a2 2 0 0 1 0 4H8m4 4v-8m3 8v-8h2a2 2 0 0 1 0 4h-2" stroke="#ef4444" stroke-width="1.5"/>
+                                        </svg>
+                                        {{ basename($download->file_path) }}
+                                    </span>
                                     <span class="text-xs text-gray-400 space-x-4">
                                         @php
         $disk = Illuminate\Support\Facades\Storage::disk('public');
