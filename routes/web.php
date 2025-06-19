@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\SystemsController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -56,6 +57,9 @@ Route::get('/products', [ProductController::class, 'index'])->name('products.ind
 Route::get('/products/{subcategory:slug}', [ProductController::class, 'bySubcategory'])->name('products.by-subcategory');
 Route::get('/products/category/{category:slug}', [ProductController::class, 'byCategory'])->name('products.by-category');
 Route::get('/products/{product:slug}', [ProductController::class, 'show'])->name('products.show');
+
+// Systems Routes
+Route::get('/systems', [SystemsController::class, 'index'])->name('systems.index');
 
 
 

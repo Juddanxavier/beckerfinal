@@ -167,7 +167,8 @@ use App\Models\Category;
 
 $productCategories = Category::with('subcategories')->orderBy('name')->get();
             ?>
-            <div class="relative group" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+            <div class="relative group" x-data="{ open: false, openSystems: false }" @mouseenter="open = true"
+                @mouseleave="open = false">
                 <a href="" class="nav-link flex items-center font-semibold text-gray-900 relative overflow-hidden group"
                     @click="open = !open">
                     <span>Products</span>
@@ -202,6 +203,22 @@ $productCategories = Category::with('subcategories')->orderBy('name')->get();
                                     </ul>
                                 </div>
                             @endforeach
+                            <!-- Systems Section -->
+                            <div>
+                                <h6 class="text-sm font-bold text-[#1e3a8a] mb-2">Systems</h6>
+                                <ul class="space-y-2">
+                                    <li><a href="/systems#variair" class="hover:text-blue-700">VARIAIR Central
+                                            System</a></li>
+                                    <li><a href="/systems#central" class="hover:text-blue-700">Centralised System</a>
+                                    </li>
+                                    <li><a href="/systems#roots" class="hover:text-blue-700">Roots Booster Packages</a>
+                                    </li>
+                                    <li><a href="/systems#vessel" class="hover:text-blue-700">Vacuum Systems with
+                                            Vessel</a></li>
+                                    <li><a href="/systems#controller" class="hover:text-blue-700">VARIAIR
+                                            Controller+</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -256,6 +273,26 @@ $productCategories = Category::with('subcategories')->orderBy('name')->get();
                 class="block px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition">About</a>
             <a href="/services"
                 class="block px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition">Services</a>
+            <!-- Systems Mobile Collapsible -->
+            <div x-data="{ open: false }">
+                <button @click="open = !open"
+                    class="w-full flex items-center justify-between px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition focus:outline-none">
+                    <span>Systems</span>
+                    <svg :class="{ 'rotate-180': open }" class="ml-2 w-5 h-5 transition-transform duration-300"
+                        fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div x-show="open" x-transition class="mt-2 bg-white rounded-xl p-4 text-[#1e3a8a] shadow-lg">
+                    <ul class="space-y-2">
+                        <li><a href="/systems#variair" class="hover:text-blue-700">VARIAIR</a></li>
+                        <li><a href="/systems#central" class="hover:text-blue-700">Central System</a></li>
+                        <li><a href="/systems#roots" class="hover:text-blue-700">Roots Booster</a></li>
+                        <li><a href="/systems#vessel" class="hover:text-blue-700">Vacuum Systems with Vessel</a></li>
+                        <li><a href="/systems#controller" class="hover:text-blue-700">VARIAIR Controller+</a></li>
+                    </ul>
+                </div>
+            </div>
             <div x-data="{ open: false }">
                 <button @click="open = !open"
                     class="w-full flex items-center justify-between px-3 py-3 rounded-lg font-bold text-white hover:bg-[#2563eb] transition focus:outline-none">
