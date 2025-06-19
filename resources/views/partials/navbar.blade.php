@@ -205,7 +205,9 @@ $productCategories = Category::with('subcategories')->orderBy('name')->get();
                             @endforeach
                             <!-- Systems Section -->
                             <div>
-                                <h6 class="text-sm font-bold text-[#1e3a8a] mb-2">Systems</h6>
+                                <h6 class="text-sm font-bold text-[#1e3a8a] mb-2"><a href="/systems"
+                                        class="hover:text-blue-700">
+                                        Systems</a></h6>
                                 <ul class="space-y-2">
                                     <li><a href="/systems#variair" class="hover:text-blue-700">VARIAIR Central
                                             System</a></li>
